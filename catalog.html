@@ -25,10 +25,11 @@
       <a href="tel:+78125550555">+7 (812) 555-05-55</a>
       <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
       <section class="user-info signed">
-       <h2 class="hidden">Информация о пользователе</h2>
+       <h2 class="visually-hidden">Информация о пользователе</h2>
        <div class="username-info">
          <p class="username">Равшан Джамшутович</p>
          <button type="button" name="sign-out-button">
+           <span class="visually-hidden">Кнопка выйти из аккаунта</span>
          </button>
        </div>
       </section>
@@ -68,10 +69,10 @@
     </header>
     <main>
       <section class="page-nav">
-        <h2 class="hidden">Дополнительная навигация</h2>
+        <h2 class="visually-hidden">Дополнительная навигация</h2>
         <ul>
           <li>
-            <a href="index.html"></a>
+            <a href="index.html" aria-label="Ссылка на главную"></a>
           </li>
           <li>
             <a href="catalog.html">Каталог</a>
@@ -87,73 +88,72 @@
       <h1>Перфораторы</h1>
       <section class="filters">
         <h2>Фильтр:</h2>
-        <section class="price">
-          <h3>Цена:</h3>
-          <input type="range" name="price-filter" value="0" min="0">
-          <output name="price-filter-result-min"></output>
-          -
-          <output name="price-filter-result-max"></output>
-        </section>
-        <section class="producers">
-          <h3>Производители:</h3>
-          <ul>
-            <li>
-              <label>
-                <input type="checkbox" name="BOSCH">
-                BOSCH
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" name="ИНТЕРСКОЛ">
-                ИНТЕРСКОЛ
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" name="MAKITA">
-                MAKITA
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" name="Dewalt">
-                Dewalt
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" name="Hitachi">
-                Hitachi
-              </label>
-            </li>
-          </ul>
-        </section>
-        <section class="power">
-          <h3>Питание</h3>
-          <ul>
-            <li>
-              <input type="radio" name="power" value="battery">
-              Аккумуляторные
-            </li>
-            <li>
-              <input type="radio" name="power" value="power-grid">
-              Сетевые
-            </li>
-          </ul>
-        </section>
-        <button type="button" name="show-more-button">Показать</button>
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <fieldset class="producers-form">
+            <legend>Производители:</legend>
+            <ul>
+              <li>
+                <label>
+                  <input type="checkbox" name="BOSCH">
+                  BOSCH
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="ИНТЕРСКОЛ">
+                  ИНТЕРСКОЛ
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="MAKITA">
+                  MAKITA
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="Dewalt">
+                  Dewalt
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="Hitachi">
+                  Hitachi
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="power-form">
+            <legend>Питание</legend>
+            <ul>
+              <li>
+                <input type="radio" name="power" value="battery">
+                Аккумуляторные
+              </li>
+              <li>
+                <input type="radio" name="power" value="power-grid">
+                Сетевые
+              </li>
+            </ul>
+          </fieldset>
+          <button type="submit" name="catalog-submit-button">Показать</button>
+        </form>
       </section>
       <section class="sort">
         <h2>Сортировка:</h2>
         <button type="button" name="price-sort">По цене</button>
         <button type="button" name="type-sort">По типу</button>
         <button type="button" name="functional-sort">По функционалу</button>
-        <button type="button" name="arrow-up-sort"></button>
-        <button type="button" name="arrow-down-sort"></button>
+        <button type="button" name="arrow-up-sort">
+          <span class="visually-hidden">Кнопка сортировки по возрастанию</span>
+        </button>
+        <button type="button" name="arrow-down-sort">
+          <span class="visually-hidden">Кнопка сортировки по убыванию</span>
+        </button>
       </section>
       <section class="perforator-catalog">
-        <h2 class="hidden">Каталог перфораторов</h2>
+        <h2 class="visually-hidden">Каталог перфораторов</h2>
         <ul>
           <li>
             <div class="perforator-card">
@@ -232,11 +232,11 @@
         </ul>
       </section>
       <section class="pages-counter">
-        <h2 class="hidden">Перелистывание страниц</h2>
-        <a href="catalog.html">1</a>
-        <a href="not_found.html">2</a>
-        <a href="not_found.html">3</a>
-        <a href="not_found.html">Следующая</a>
+        <h2 class="visually-hidden">Перелистывание страниц</h2>
+        <a href="catalog.html" aria-label="Страница каталога 1">1</a>
+        <a href="not_found.html" aria-label="Страница каталога 2">2</a>
+        <a href="not_found.html" aria-label="Страница каталога 3">3</a>
+        <a href="not_found.html" aria-label="Следующая страница каталога">Следующая</a>
       </section>
       <article class="product-page-description">
         <h2>Пара слов о перфораторах</h2>
@@ -286,7 +286,7 @@
         </ul>
         <p>© 2010–2019 Компания «Техномарт» <br>Все права защищены</p>
         <section class="social-nets">
-          <h2 class="hidden">Наши соц. сети</h2>
+          <h2 class="visually-hidden">Наши соц. сети</h2>
           <ul>
             <li>
               <a href="not_found.html">
@@ -314,5 +314,13 @@
           <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
         </p>
     </footer>
+    <aside class="basket-notification">
+      <button type="button" name="close-button-catalog">
+        <span class="visually-hidden">Кнопка закрытия окна</span>
+      </button>
+      <h2>Товар добавлен в корзину!</h2>
+      <a href="not_found.html">Оформить заказ</a>
+      <button type="button" name="close-button-catalog">Продолжить покупки</button>
+    </aside>
   </body>
 </html>
