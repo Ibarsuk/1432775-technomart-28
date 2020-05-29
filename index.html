@@ -71,24 +71,25 @@
        </ul>
      </nav>
     </header>
-    <main>
+    <main class="main">
       <h1 class="visually-hidden">Интернет-магазин Техномарт</h1>
       <section class="offers">
         <h2 class="visually-hidden">Предложения</h2>
         <ul>
-          <li>
+          <li class="materials">
+            <span class="card-new">new</span>
             <h3>Материалы</h3>
             <a href="not_found.html">На любой вкус</a>
           </li>
-          <li>
+          <li class="tools">
             <h3>Инструмент</h3>
             <a href="catalog.html">На все случаи</a>
           </li>
-          <li>
+          <li class="machines">
             <h3>Техника</h3>
             <a href="not_found.html">Для стройки</a>
           </li>
-          <li>
+          <li class="perforators">
             <h3>Перфораторы</h3>
             <p>Настоящие мужские игрушки</p>
             <button type="button" name="slider-button-left">
@@ -100,17 +101,19 @@
             <a href="catalog.html" class="button">Открыть каталог</a>
             <label>
               <input type="radio" name="slider-offers" value="slider-perforator" checked aria-label="Переход на первую страницу слайдера">
+              <span></span>
             </label>
             <label>
               <input type="radio" name="slider-offers" value="slider-drill" aria-label="Переход на вторую страницу слайдера">
+              <span></span>
             </label>
           </li>
-          <li>
+          <li class="discounts">
             <h3>Скидки 50%</h3>
             <a href="not_found.html">На 350 товаров</a>
           </li>
-          <li>
-            <h3>доставка</h3>
+          <li class="delivery">
+            <h3>Доставка</h3>
             <a href="not_found.html">Бесплатно</a>
           </li>
         </ul>
@@ -159,7 +162,7 @@
       </section>
       <section class="popular-producers">
         <header class="section-header">
-          <h2>Популярные производители</h2>
+          <h2>Популярные производители:</h2>
           <a href="not_found.html" class="button">Все производители</a>
         </header>
         <ul>
@@ -236,19 +239,19 @@
           <li>
             <label>
               <input type="radio" name="service-slider" value="delivery" checked>
-              Доставка
+              <span>Доставка</span>
             </label>
           </li>
           <li>
             <label>
               <input type="radio" name="service-slider" value="guarantee">
-              Гарантия
+              <span>Гарантия</span>
             </label>
           </li>
           <li>
             <label>
               <input type="radio" name="service-slider" value="credit">
-              Кредит
+              <span>Кредит</span>
             </label>
           </li>
         </ul>
