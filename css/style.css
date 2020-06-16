@@ -244,6 +244,11 @@ input[type="search"]:focus {
 }
 
 
+.header-top-link-full {
+  background-color: var(--color-red);
+}
+
+
 .tabs::before {
   position: absolute;
   top: 12px;
@@ -284,7 +289,7 @@ input[type="search"]:focus {
 
 .basket {
   position: relative;
-  padding: 9px 26px 9px 49px;
+  padding: 9px 0 9px 49px;
 }
 
 
@@ -474,6 +479,8 @@ opacity: 0.3;
   box-shadow: inset 0px -5px 0px var(--color-293449);
   margin: 0;
   padding: 0;
+  padding-left: 22px;
+  padding-right: 18px;
 }
 
 .main-nav li {
@@ -830,6 +837,7 @@ opacity: 0.3;
 
 .popular-goods h2 {
   letter-spacing: -1px;
+  word-spacing: 3px;
 }
 
 
@@ -851,6 +859,7 @@ opacity: 0.3;
 
 .popular-producers h2 {
   letter-spacing: -1px;
+  word-spacing: 3px;
 }
 
 
@@ -939,6 +948,7 @@ opacity: 0.3;
   line-height: 30px;
   margin-top: 64px;
   text-transform: uppercase;
+  letter-spacing: -1px;
 }
 
 
@@ -1383,6 +1393,7 @@ opacity: 0.3;
 
 
 .support-field {
+  z-index: 10;
   position: fixed;
   top: 0;
   left: 0;
@@ -1938,14 +1949,20 @@ span.input-check {
 }
 
 
-input:checked + span.input-check {
-  width: 27px;
-  background-image: url(../img/checkbox-on.svg);
+input:focus + span.input-check {
+  outline: 1px solid black;
 }
 
 
-input:focus + span.input-check {
+input:focus + span.input-radio {
   border: 1px solid black;
+  border-radius: 50%;
+}
+
+
+input:checked + span.input-check {
+  width: 27px;
+  background-image: url(../img/checkbox-on.svg);
 }
 
 
@@ -2075,7 +2092,7 @@ input:checked + span.input-radio {
   overflow: hidden;
   box-sizing: border-box;
   width: 220px;
-  height: 318px;
+  min-height: 318px;
   font-family: "PT Sans", sans-serif;
   font-weight: bold;
   border: 1px solid var(--color-EAEAEA);
@@ -2312,6 +2329,7 @@ input:checked + span.input-radio {
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
+  word-spacing: 2px;
 }
 
 
@@ -2356,4 +2374,34 @@ input:checked + span.input-radio {
   line-height: 21px;
   padding: 15px;
   width: 250px;
+}
+
+
+@keyframes left-appear {
+  0% {
+    transform: translateX(-500%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+
+.left-appear {
+  animation: left-appear 0.2s;
+}
+
+
+@keyframes right-disappear {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(500%);
+  }
+}
+
+
+.right-disappear {
+  animation: right-disappear 0.2s;
 }
