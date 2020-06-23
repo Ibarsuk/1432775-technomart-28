@@ -187,7 +187,7 @@ img {
 }
 
 
-.main-header label svg {
+.main-header svg {
   position: absolute;
   top: 12px;
   left: 17px;
@@ -1979,7 +1979,7 @@ input:checked + span.input-radio {
 }
 
 
-.sort .sort-links .current-sort {
+.sort-links .current-sort:not(.sort-arrow) {
   color: var(--color-red);
   opacity: 1;
   border-bottom: none;
@@ -2138,7 +2138,7 @@ input:checked + span.input-radio {
   padding-top: 10px;
   padding-left: 33px;
   margin-left: 10px;
-  margin-bottom: 19px;
+  margin-bottom: 21px;
   border-radius: 3px;
   color: var(--color-white);
   font-size: 17px;
