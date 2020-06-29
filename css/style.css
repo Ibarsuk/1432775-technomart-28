@@ -195,7 +195,7 @@ img {
 }
 
 
-.main-header label:hover svg {
+.search-label:hover svg {
   opacity: 1;
 }
 
@@ -1086,7 +1086,7 @@ opacity: 0.3;
 .info-and-contacts {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 70px;
+  margin-bottom: 72px;
 }
 
 
@@ -1545,7 +1545,8 @@ opacity: 0.3;
   justify-content: space-around;
   align-items: center;
   background-color: var(--color-white);
-  width: 299px;
+  min-width: 299px;
+  max-width: 340px;
   min-height: 45px;
 }
 
@@ -1554,7 +1555,8 @@ opacity: 0.3;
   color: var(--color-black);
   font-size: 21px;
   line-height: 21px;
-  margin-left: 42px;
+  margin-left: 51px;
+  margin-right: 30px;
 }
 
 
@@ -2102,6 +2104,18 @@ input:checked + span.input-radio {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+.catalog-item-img img {
+  padding-right: 10px;
+  padding-top: 5px;
+}
+
+
+img[alt="Перфоратор BOSCH BFG 9000"] {
+  padding-right: 0px;
+
 }
 
 
